@@ -1,0 +1,8 @@
+*.pyc
+.idea
+dist
+build
+env
+bountyconfig.py
+bounties.db
+.project
