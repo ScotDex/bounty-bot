@@ -1,6 +1,5 @@
 const { Client, GatewayIntentBits } = require ('discord.js')
 const { routeInteractions } = require (`./handlers`)
-const { startMonitor } = require (`./monitor`)
 const http = require('http');
 require('dotenv').config();
 
@@ -34,8 +33,6 @@ client.on('interactionCreate', async (interaction) => {
 client.once('clientReady', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log("Bot is now running. Press CTRL-C to exit.");
-
-    startMonitor();
 });
 
 client.login(botToken).catch(err => {
